@@ -15,13 +15,13 @@
         /* Mobile-first styles */
         /* These styles apply to all devices */
         body {
-            font-size: 16px;
+            font-size: 14px; /* Further reduced font size for mobile */
         }
 
         /* Media query for tablets and larger screens */
         @media screen and (min-width: 768px) {
             body {
-                font-size: 18px;
+                font-size: 16px;
             }
         }
 
@@ -59,7 +59,7 @@
         }
 
         .header h1 {
-            font-size: 2em; /* Adjusted font size for mobile */
+            font-size: 1.5em; /* Adjusted font size for mobile */
             font-family: 华文行楷;
             font-weight: 6;
             letter-spacing: -3px;
@@ -72,9 +72,8 @@
         }
 
         .company-info img {
-            max-width: 100%; /* Make the image responsive */
+            width: 100%; /* Adjusted image size to fit screen width */
             height: auto;
-            margin-right: 10px; /* Adjust the spacing as needed */
         }
 
         /* Taskbar Formatting */
@@ -87,8 +86,8 @@
         }
 
         .taskbar li {
-            font-size: 1em; /* Adjusted font size for mobile */
-            margin: 0 10px; /* Reduced margin for mobile */
+            font-size: 0.8em; /* Further reduced font size for mobile */
+            margin: 0 10px;
             font-family: Arial, sans-serif;
             font-weight: lighter;
             outline: none;
@@ -132,7 +131,7 @@
         .taskbar .dropdown a {
             text-decoration: none;
             color: black;
-            font-size: 16px; /* Adjusted font size for mobile */
+            font-size: 14px; /* Adjusted font size for mobile */
             font-weight: light;
         }
 
@@ -146,7 +145,7 @@
             background: url('Background2.jpg') center/cover no-repeat;
             color: #fff;
             text-align: center;
-            padding: 320px 10px 30px 10px; /* Adjusted padding for mobile */
+            padding: 320px 10px 30px 10px;
         }
 
         .hero t1 {
@@ -157,7 +156,7 @@
 
         /* Add some padding and styling for the main sections */
         main {
-            padding: 20px; /* Adjusted padding for mobile */
+            padding: 20px;
         }
 
         .section {
@@ -167,11 +166,11 @@
         }
 
         .section h2 {
-            font-size: 1.5em; /* Adjusted font size for mobile */
+            font-size: 1.2em; /* Adjusted font size for mobile */
         }
 
         .section p {
-            font-size: 1.2em; /* Adjusted font size for mobile */
+            font-size: 1em; /* Adjusted font size for mobile */
         }
 
         /* Style the buttons */
@@ -217,13 +216,13 @@
         .bottom-section h2 {
             font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
             color: #5a5344;
-            font-size: 1.5em; /* Adjusted font size for mobile */
+            font-size: 1.2em; /* Adjusted font size for mobile */
         }
 
         .bottom-section p {
             font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
             color: #5a5344;
-            font-size: 1.2em; /* Adjusted font size for mobile */
+            font-size: 1em; /* Adjusted font size for mobile */
         }
     </style>
 </head>
@@ -231,7 +230,7 @@
 <body>
     <div class="header">
         <div class="company-info">
-            <img src="Templelogoword.png" alt="Company Logo" style="max-width: 100%;">
+            <img src="Templelogoword.png" alt="Company Logo">
         </div>
         <nav class="taskbar">
             <ul>
