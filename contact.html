@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, c1, p, p1, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: transparent transparent; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        }
+
+        /* Webkit (Chrome, Safari) scrollbar customization */
+            body::-webkit-scrollbar {
+                width: 6px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: transparent; /* Adjust to match your background color */
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+
+
+        /* Set a light yellow background for the entire page */
+        body {
+            background-color: #ffffcc;
+            font-family: serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f6e6a5;
+            padding: 5px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-family: '华文行楷', cursive; /* Added quotes around the font name */
+            font-weight: 6; /* Use 'bold' instead of '6' for font weight */
+            letter-spacing: -3px;
+            margin: 0;
+        }
+
+        .company-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .company-info img {
+            width: 300px; /* Adjust the width as needed */
+            height: auto;
+            margin-right: 10px; /* Adjust the spacing as needed */
+        }
+
+        .taskbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+
+        .taskbar li {
+            font-size: 1.2em;
+            margin: 0 30px;
+            font-family: Arial, sans-serif;
+            font-weight: lighter;
+            outline: none;
+        }
+
+        .taskbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: lighter;
+            cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+        }
+
+        .taskbar .active a {
+            color: #655a3f; /* Change the color to your desired highlight color */
+            border-bottom: 2px solid #655a3f;
+            font-weight: bold;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Code for "Contact Us" */
+        .contact {
+            background-color: none;
+            padding: 10px 20px 0px 20px;
+            margin: 0px 20px 0px 50px; /* Adjusted the top margin to move the section down */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+            font-family: serif;
+            text-align: left;
+            float: left;
+            width: 45%;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        /* Code for "Contact Us" */
+        c1 {
+            font-size: 4.5em;
+            margin: 20px 20px 20px -20px;
+            color: #655a3f;
+        }
+
+        p {
+            font-size: 1.6em;
+            margin: -10px 20px 20px -20px;
+        }
+
+        p3 {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Code for bottom "Location" "Hours" "Contact" */
+        h1.bottom {
+            font-family: serif;
+            font-size: 2sem;
+            text-align: center;
+            color: #655a3f;
+        }
+
+        .contact-first {
+            text-align: left;
+            width: 45%;
+            float: none;
+            padding: -20px -170px 20px 20px;
+            margin: -90px 0px 90px 50px;
+            background-color: #ffffff00;
+        }
+
+        .contact-last {
+            text-align: left;
+            width: 45%;
+            float: none;
+            padding: 20px -170px 20px 20px;
+            margin: -360px 0px 40px 420px;
+            background-color: #ffffff00;
+        }
+
+        .contact-subject {
+            text-align: left;
+            width: 96%;
+            float: none;
+            padding: 20px -170px 20px 20px;
+            margin: -45px 0px 40px 50px;
+            background-color: #ffffff00;
+        }
+
+        .contact-email {
+            text-align: left;
+            width: 96%;
+            float: none;
+            padding: 20px -170px 20px 20px;
+            margin: -43px 0px 40px 50px;
+            background-color: #ffffff00;
+        }
+
+        .contact-message {
+            text-align: left;
+            width: 96%;
+            float: none;
+            padding: 20px -170px 20px 20px;
+            margin: -43px 0px 40px 50px;
+            background-color: #ffffff00;
+        }
+
+        .contact-image {
+            width: 42%;
+            height: auto;
+            float: right;
+            margin: -660px 50px 0px 0px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.6em;
+            font-family: sans-serif;
+            color: #5a5344;
+            margin-top: 10px;
+        }
+
+        .form-group {
+            display: inline-block;
+            width: 48%;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.4em;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: rgb(233, 175, 67);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1.6em;
+            cursor: pointer;
+        }
+
+        .location-info {
+            font-size: 1.6em;
+            margin-top: 20px;
+        }
+
+        /* Create a grid layout for the bottom sections */
+        .bottom-sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        /* Style individual bottom sections */
+        .bottom-section {
+            background-color: none;
+            color: #5a5344;
+            padding: 20px 90px 20px 90px;
+            text-align: center;
+            box-shadow: none;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company-info">
+            <img src="Templelogoword.png" alt="Company Logo">
+        </div>
+        <nav class="taskbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="active"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="contact">
+        <c1>Contact Us</c1>
+        <p>We'd love to hear from you. Please fill out the form below:</p>
+    </div>
+
+    <div class="contact-first">
+        <form>
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+        </form>
+    </div>
+
+    <div class="contact-last">
+        <form>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+        </form>
+    </div>
+
+    <div class="contact-subject">
+        <form>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="Subject" name="Subject" required>
+            </div>
+        </form>
+    </div>
+
+    <div class="contact-email">
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+        </form>
+    </div>
+
+    <div class="contact-message">
+        <form style="display: flex; flex-direction: column; align-items: flex-start;">
+            <div class="form-group" style="width: 80%;">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" style="width: 700px; height: 130px;"></textarea>
+            </div>
+            <div class="form-group" style="width: 100%;">
+                <input type="submit" value="Submit" style="background-color: #655a3f; color: white; border: none; border-radius: 100px; padding: 10px 20px; font-size: 1.3em; cursor: pointer; width: 8%;">
+            </div>
+        </form>
+    </div>
+
+    <div class="contact-image">
+        <img src="Contactusimage.jpg" alt="Your Image" style="width: 100%; height: auto;">
+    </div>
+
+    <main class="bottom-sections">
+        <section class="bottom-section" id="Location">
+            <h2 style="margin-bottom: 20px;">Location</h2>
+            <p3>95 Tampines Link #01-01<br>Singapore 528745</p3>
+        </section>
+
+        <section class="bottom-section" id="Hours">
+            <h2 style="margin-bottom: 20px;">Hours</h2>
+            <p3>Monday - Sunday<br>6am - 5:30pm</p3>
+        </section>
+
+        <section class="bottom-section" id="Contact">
+            <h2 style="margin-bottom: 20px;">Contact</h2>
+            <p3>+(65) 6787 8887</p3>
+        </section>
+    </main>
+
+    <footer>
+        <p1 style="margin-bottom: 20px;">Copyright &copy; 2023. All Rights Reserved.</p1>
+        <p1>The above is a work in progress.</p1>
+    </footer>
+</body>
+</html>
