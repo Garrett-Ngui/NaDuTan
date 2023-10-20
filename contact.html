@@ -11,6 +11,19 @@
             padding: 0;
         }
 
+        /* Mobile-first styles */
+        /* These styles apply to all devices */
+        body {
+            font-size: 16px;
+        }
+
+        /* Media query for tablets and larger screens */
+        @media screen and (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
         body {
             scrollbar-width: thin; /* For Firefox */
             scrollbar-color: transparent transparent; /* For Firefox */
