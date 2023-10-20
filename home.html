@@ -58,7 +58,7 @@
         }
 
         .header h1 {
-            font-size: 2.5em;
+            font-size: 2em; /* Adjusted font size for mobile */
             font-family: 华文行楷;
             font-weight: 6;
             letter-spacing: -3px;
@@ -76,7 +76,7 @@
             margin-right: 10px; /* Adjust the spacing as needed */
         }
 
-        /*Taskbar Formatting*/
+        /* Taskbar Formatting */
         .taskbar ul {
             list-style: none;
             display: flex;
@@ -86,12 +86,12 @@
         }
 
         .taskbar li {
-            font-size: 1em; /* Adjusted font size for mobile */
-            margin: 0 15px; /* Adjusted margin for mobile */
+            font-size: 0.8em; /* Adjusted font size for mobile */
+            margin: 0 10px; /* Adjusted margin for mobile */
             font-family: Arial, sans-serif;
             font-weight: lighter;
             outline: none;
-            position: relative; /*added for positioning the dropdown*/
+            position: relative; /* added for positioning the dropdown */
         }
 
         .taskbar a {
@@ -113,7 +113,7 @@
             position: absolute;
             background-color: #ffe6a6;
             min-width: 120px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
@@ -130,7 +130,7 @@
         .taskbar .dropdown a {
             text-decoration: none;
             color: black;
-            font-size: 20px;
+            font-size: 16px; /* Adjusted font size for mobile */
             font-weight: light;
         }
 
@@ -141,19 +141,39 @@
         /* Center the website name in the hero section */
         .hero {
             background: url('Background2.jpg') center/cover no-repeat;
-            background-size: 100% 100%; /* Set the background size to 100% width and 100% height */
+            background-size: cover; /* Set the background size to cover */
+            background-position: center center; /* Center the background image */
             color: #fff;
             text-align: center;
             padding: 320px 10px 30px 10px;
         }
 
         .hero h1 {
-            font-size: 3em; /* Adjusted font size for mobile */
+            font-size: 2.5em; /* Adjusted font size for mobile */
             font-family: 华文行楷;
             margin: 0;
         }
 
         /* Add some padding and styling for the main sections */
+        main {
+            padding: 20px; /* Adjusted padding for mobile */
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 15px; /* Adjusted padding for mobile */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 1.8em; /* Adjusted font size for mobile */
+        }
+
+        .section p {
+            font-size: 1.2em; /* Adjusted font size for mobile */
+        }
+
+        /* Style the buttons */
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -171,7 +191,7 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 10px 0; /* Adjusted padding for mobile */
         }
 
         /* Hide sections initially */
@@ -182,25 +202,23 @@
         /* Create a grid layout for the bottom sections */
         .bottom-sections {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(1, 1fr); /* Adjusted for mobile */
             gap: 20px;
         }
 
         /* Style individual bottom sections */
         .bottom-section {
             background-color: #fff;
-            padding: 20px;
+            padding: 15px; /* Adjusted padding for mobile */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .bottom-section h2 {
-            font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
-            color: #5a5344;
+            font-size: 1.8em; /* Adjusted font size for mobile */
         }
 
         .bottom-section p {
-            font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
-            color: #5a5344;
+            font-size: 1.2em; /* Adjusted font size for mobile */
         }
     </style>
 </head>
@@ -218,20 +236,18 @@
                         <li><a href="#service1">拜太岁</a></li>
                         <li><a href="#service2">拜虎爷将军</a></li>
                         <li><a href="#service3">拜甘尼莎佛祖</a></li>
-                        <li><a href="#service4">拜天公</a></li>
+                        <li><a href="#service3">拜天公</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </div>
-
     <header class="hero">
         <div class="content">
             <h1>Website Name</h1>
         </div>
     </header>
-
     <main class="bottom-sections">
         <section class="bottom-section" id="about">
             <h2>About Us</h2>
@@ -239,14 +255,12 @@
             <br><br>
             <a href="about.html" class="btn">Learn More</a>
         </section>
-
         <section class="bottom-section" id="services">
             <h2>Our Services</h2>
             <p>Explore the rituals and celebrations that we have all year round.</p>
             <br>
             <a href="services.html" class="btn">Explore Services</a>
         </section>
-
         <section class="bottom-section" id="contact">
             <h2>Contact Us</h2>
             <p>Contact us or leave us any questions that you have.</p>
@@ -254,7 +268,6 @@
             <a href="contact.html" class="btn">Contact Us</a>
         </section>
     </main>
-
     <footer>
         <p style="margin-bottom: 20px;">Copyright &copy; 2023. All Rights Reserved.</p>
         <p>The above is a work in progress.</p>
