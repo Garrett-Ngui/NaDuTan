@@ -79,18 +79,62 @@
 
         /* Style sections */
         section {
-            background-color: #fff;
+            background-color: #fff5d9;
             padding: 20px;
             margin: 10px 0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 150px;
         }
 
         section h2 {
             font-size: 1.5em;
+            color: #655a3f;
         }
 
         section p {
             font-size: 1.2em;
+        }
+
+        /* Style the buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fbe19f;
+            color: black;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
+            font-weight: bold;
+        }
+
+        /* Create a grid layout for the bottom sections */
+        .bottom-sections2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: none;
+            gap: 0;
+        }
+
+        /* Style individual bottom sections */
+        .bottom-section2 {
+            background-color: transparent;
+            color: #5a5344;
+            text-align: center;
+            box-shadow: none;
+        }
+
+        .bottom-section2 h2 {
+            background-color: none;
+            color: #5a5344;
+            font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .bottom-section2 p {
+            background-color: none;
+            color: #5a5344;
+            font-family: 'Franklin Gothic light', 'Arial Narrow', Arial, sans-serif;
+            font-size: 95%;
         }
 
         /* Style the footer */
@@ -99,6 +143,7 @@
             color: #fff;
             text-align: center;
             padding: 10px 0;
+            font-size: 70%;
         }
     </style>
 </head>
@@ -114,9 +159,9 @@
             <li><a href="contact.html">Contact</a></li>
         </nav>
 
-
         <!-- Responsive image -->
         <img src="Background2.jpg" alt="Image Description">
+
 
     <main class="bottom-sections">
       <section class="bottom-section" id="about">
@@ -126,7 +171,7 @@
       </section>
       <section class="bottom-section" id="services">
           <h2>Our Services</h2>
-          <p>Explore the rituals and celebrations that we have all year round.</p>
+          <p>Explore the events and celebrations that we have during the year.</p>
           <a href="services.html" class="btn">Explore Services</a>
       </section>
       <section class="bottom-section" id="contact">
@@ -135,6 +180,23 @@
           <a href="contact.html" class="btn">Contact Us</a>
       </section>
   </main>
+
+  <main class="bottom-sections2">
+    <section class="bottom-section2" id="Location">
+        <h2 style="margin-bottom: 20px;">Location</h2>
+        <p>95 Tampines Link #01-01<br>Singapore 528745</p>
+    </section>
+
+    <section class="bottom-section2" id="Hours">
+        <h2 style="margin-bottom: 20px;">Hours</h2>
+        <p>Monday - Sunday<br>6am - 5:30pm</p>
+    </section>
+
+    <section class="bottom-section2" id="Contact">
+        <h2 style="margin-bottom: 20px;">Contact</h2>
+        <p>+65 6787 8887<br>+65 9007 4398</p>
+    </section>
+</main>
 
     <footer>
         <p> Copyright &copy; 2023. All rights reserved.</p>
