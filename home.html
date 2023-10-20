@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,8 +32,8 @@
         }
 
         /* Webkit (Chrome, Safari) scrollbar customization */
-            body::-webkit-scrollbar {
-                width: 6px;
+        body::-webkit-scrollbar {
+            width: 6px;
         }
 
         body::-webkit-scrollbar-thumb {
@@ -71,12 +72,12 @@
         }
 
         .company-info img {
-            width: 300px; /* Adjust the width as needed */
+            max-width: 100%; /* Make the image responsive */
             height: auto;
             margin-right: 10px; /* Adjust the spacing as needed */
         }
 
-        /*Taskbar Formatting*/
+        /* Taskbar Formatting */
         .taskbar ul {
             list-style: none;
             display: flex;
@@ -87,11 +88,11 @@
 
         .taskbar li {
             font-size: 1.2em;
-            margin: 0 30px;
+            margin: 0 10px; /* Reduced margin for mobile */
             font-family: Arial, sans-serif;
             font-weight: lighter;
             outline: none;
-            position: relative; /*added for positioning the dropdown*/
+            position: relative; /* Added for positioning the dropdown */
         }
 
         .taskbar a {
@@ -102,7 +103,8 @@
         }
 
         .taskbar .active a {
-            color: #655a3f; /* Change the color to your desired highlight color */
+            color: #655a3f;
+            /* Change the color to your desired highlight color */
             border-bottom: 2px solid #655a3f;
             font-weight: bold;
         }
@@ -113,7 +115,7 @@
             position: absolute;
             background-color: #ffe6a6;
             min-width: 120px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
         }
 
@@ -135,7 +137,8 @@
         }
 
         .taskbar .dropdown a:hover {
-            color: #655a3f; /* Change the color to your desired highlight color */
+            color: #655a3f;
+            /* Change the color to your desired highlight color */
         }
 
         /* Center the website name in the hero section */
@@ -143,20 +146,18 @@
             background: url('Background2.jpg') center/cover no-repeat;
             color: #fff;
             text-align: center;
-            padding: 720px 10px 30px 10px;
+            padding: 320px 10px 30px 10px; /* Adjusted padding for mobile */
         }
 
-
-
         .hero t1 {
-            font-size: 6em;
+            font-size: 3em; /* Adjusted font size for mobile */
             font-family: 华文行楷;
             margin: 0;
         }
 
         /* Add some padding and styling for the main sections */
         main {
-            padding: 50px;
+            padding: 20px; /* Adjusted padding for mobile */
         }
 
         .section {
@@ -166,11 +167,11 @@
         }
 
         .section h2 {
-            font-size: 2.5em;
+            font-size: 2em; /* Adjusted font size for mobile */
         }
 
         .section p {
-            font-size: 1.6em;
+            font-size: 1.4em; /* Adjusted font size for mobile */
         }
 
         /* Style the buttons */
@@ -182,7 +183,7 @@
             text-decoration: none;
             border: none;
             border-radius: 5px;
-            font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;;
+            font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
             font-weight: bold;
         }
 
@@ -202,7 +203,7 @@
         /* Create a grid layout for the bottom sections */
         .bottom-sections {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr); /* Adjusted columns for mobile */
             gap: 20px;
         }
 
@@ -213,21 +214,19 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .bottom-section h2{
+        .bottom-section h2 {
             font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
             color: #5a5344;
         }
 
-        .bottom-section p{
+        .bottom-section p {
             font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
             color: #5a5344;
         }
-
-
     </style>
 </head>
-<body>
 
+<body>
     <div class="header">
         <div class="company-info">
             <img src="Templelogoword.png" alt="Company Logo" style="max-width: 100%;">
@@ -236,12 +235,12 @@
             <ul>
                 <li class="active"><a href="home.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a>
+                <li><a href="#" id="services">Services</a>
                     <ul class="dropdown">
                         <li><a href="#service1">拜太岁</a></li>
                         <li><a href="#service2">拜虎爷将军</a></li>
                         <li><a href="#service3">拜甘尼莎佛祖</a></li>
-                        <li><a href="#service3">拜天公</a></li>
+                        <li><a href="#service4">拜天公</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact Us</a></li>
@@ -264,16 +263,9 @@
 
         <section class="bottom-section" id="services">
             <h2>Our Services</h2>
-            <p>Explore the rituals and celebrations that we have all year round. </p>
+            <p>Explore the rituals and celebrations that we have all year round.</p>
             <br>
             <a href="services.html" class="btn">Explore Services</a>
-        </section>
-
-        <section class="bottom-section" id="contact">
-            <h2>Contact Us</h2>
-            <p>Contact us or leave us any questions that you have.</p>
-            <br><br>
-            <a href="contact.html" class="btn">Contact Us</a>
         </section>
     </main>
 
@@ -282,4 +274,5 @@
         <p1>The above is a work in progress.</p1>
     </footer>
 </body>
+
 </html>
