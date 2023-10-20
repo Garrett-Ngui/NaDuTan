@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Set a background color for the entire page */
+        body {
+            background-color: #fff5d9;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: transparent transparent; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        }
+
+        /* Webkit (Chrome, Safari) scrollbar customization */
+        body::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: transparent; /* Adjust to match your background color */
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        /* Media query for tablets and larger screens */
+        @media screen and (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+        }
+
+        /* Style for responsive images */
+        img {
+            max-width: 100%; /* Ensures images don't exceed their container width */
+            height: auto; /* Maintains the image's aspect ratio */
+            margin-top: 20px;
+        }
+
+        /* Style the header (image portion) */
+        .header {
+            background-color: #ffe6a6;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        /* Style the navigation bar */
+        nav {
+            background-color: #ffe6a6;
+            text-align: center;
+            padding: 10px 0;
+            margin: -10px 0 -20px 0;
+        }
+
+        nav li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav a {
+            font-size: 100%;
+            text-decoration: none;
+            color: #333;
+            font-weight: lighter;
+        }
+
+        nav .active a {
+            color: #655a3f; /* Change the color to your desired highlight color */
+            border-bottom: 2px solid #655a3f;
+            font-weight: bold;
+        }
+
+        /* Basic styles for desktop */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Media query for mobile phones */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            .content {
+                margin-bottom: 20px; /* Add some spacing between stacked elements */
+            }
+        }
+
+        /* Basic styles for desktop */
+        .container {
+            display: flex;
+        }
+
+        .timeline {
+            width: 30%;
+        }
+
+        .timeline .event {
+            background-color: none;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* For Timeline*/
+        .event {
+            padding-left: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            width: 100%;
+        }
+
+        .year {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-right: 10px;
+            color: #655a3f;
+            text-align: center;
+        }
+
+        .description {
+            font-family: "微软雅黑", sans-serif;
+            font-size: 100%;
+            margin-left: 30px;
+            margin-right: 10px;
+            text-align: justify;
+        }
+
+        /* Add this CSS to style the dots and connecting line */
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #ffcf5a;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .event::before {
+            content: "";
+            width: 2px;
+            height: 100%;
+            background-color: #ffcf5a;
+            position: absolute;
+            left: 3.8%; /* Position the line in the center of the dot */
+        }
+
+       /* For Section 2 & 3*/
+       .sections {
+            flex: 3; /*used to update width of section*/
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section2,
+        .section3 {
+            flex: 1;
+            background-color: none;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sections h2 {
+            font-size: 350%;
+            font-family: 华文行楷;
+            color: #655a3f;
+            text-align: center;
+            font-weight: lighter;
+        }
+
+        .circular-images {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .circular-image {
+            text-align: center;
+        }
+
+        .circular-image img {
+            width: 250px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        /*Text below circular images*/
+        .circular-image p{
+            color: #ffcf5a;
+            margin-top: 5px;
+            font-family: 华文行楷;
+            font-size: 300%;
+        }
+
+        .section3 img{
+            width: 100%;
+            height: auto;
+            margin: 0;
+            border-radius: 30px;
+        }
+
+
+        /* Media query for mobile phones */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .timeline {
+                width: 100%;
+            }
+
+            .timeline .event {
+                margin: 0; /* Remove margin to stack horizontally */
+            }
+
+            .sections {
+                width: 100%;
+            }
+        }
+
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="Templelogoword.png" alt="Company Logo" style="max-width: 50%;">
+    </div>
+    
+    <nav>
+        <li class="active"><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </nav>
+
+    <div class="container">
+      <div class="content">
+          <img src="Aboutus1.jpg" alt="Aboutus1">
+      </div>
+      <div class="content">
+          <h1>我们的故事</h1>
+          <p>拿督坛建于1927年。1920年几户人家从远方来开辟丛林，把这黑暗的丛林点燃第一盏灯，称此地为 “德义村” 也称 “九条桥”。“德义村” 也称 “九条桥” 是因为村里共有九条大大小小的桥共村民使用。而 “新芭” 是指现在的罗弄泉至宏茂桥一道的地段，“老芭” 是从宏茂桥一道至淡甲路的地段。拿督公庙就刚好座落在 “新芭” 现今宏茂桥一道油站对面。</p><br>
+          <p>因为九条桥是多数人熟悉的地方，为了保留拿督公的历史，我们决定称拿督公庙为 ”九条桥新芭拿督坛“。</p><br>
+          <P>由于旧庙的地方小，为了庆祝拿督公及众神千秋，理事会决定把庆典设在宏茂桥组屋大牌306楼下，那也是本坛第一次在组屋区庆祝千秋。直到1984年政府征用土地，发展为碧山公园，本坛也搬迁到宏茂桥大牌307的组屋，继续为各界善信提供救世服务直到普宫。</P>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="timeline">
+          <!-- Timeline events -->
+          <div class="event">
+            <div class="dot"></div>
+            <span class="year">1927</span>
+            <p class="description">村民建立了拿督公庙。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">1947</span>
+            <p class="description">没经过拿督公的同意，庙被建设水管的承包商拆了。此人当天病倒，请了神降乩才知道触犯了拿督公，便托人重建拿督公庙。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">1972</span>
+            <p class="description">村民们都纷纷搬迁了，只剩下拿督公庙没被拆除，保留原地。这里没水没电，四周长满野草，常有蛇的出现。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">1976</span>
+            <p class="description">当时的拿督公庙理事们都从不同的甘榜搬到宏茂桥一道来，从7至12岁时就经常结伴到这长满野草的拿督公庙。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+             <span class="year">1984</span>
+            <p class="description">政府需征用土地发展为碧山公园，本坛也搬迁到宏茂桥大牌307的组屋。</p>
+            <br>
+            <p class="description">自从搬离旧庙后，拿督坛搬迁超过七次之多，仍无法让神明有个安定的地方已让善信膜拜。</p>
+        </div>  
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">1993</span>
+            <p class="description">由于不断搬迁不是个永久之策，当时理事会经过讨论后决定买下一间三房式组屋来安放神明。拿督坛就搬进了宏茂桥大牌316的组屋。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">1996</span>
+            <p class="description">因受到政府重建计划的影响，拿督坛又得搬迁。惹兰加油“万兴山崇义庙”理事当时允许本坛暂时有个寄宿的地方。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">2001</span>
+            <p class="description">九条桥新芭拿督坛终于联同保安宫及天德宫，联合购得立于旧淡滨尼路门牌95号至地段，五十年地契。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">2002</span>
+            <p class="description">联合庙开始兴建。</p>
+        </div>
+        <div class="event">
+            <div class="dot"></div>
+            <span class="year">2004</span>
+            <p class="description">联合庙终于建竣。九条桥新芭拿督坛也于2004年10月11日（农历甲申年八月廿八日）举行新庙落成普宫升座大典仪式。</p>
+        </div>
+      </div>
+      <div class="sections">
+        <div class="section2">
+            <h2>我们的主神</h2>
+            <div class="circular-images">
+                <div class="circular-image">
+                    <img src="ganesha1.jpg" alt="Image 1" style="max-width: 100%;">
+                    <p class="image-text">甘尼莎佛祖</p>
+                </div>
+                <div class="circular-image">
+                    <img src="nadugong1.jpg" alt="Image 2" style="max-width: 100%;">
+                    <p class="image-text">拿督公</p>
+                </div>
+                <div class="circular-image">
+                    <img src="dabogong1.jpg" alt="Image 3" style="max-width: 100%;">
+                    <p class="image-text">福德正神</p>
+                </div>
+            </div>
+        </div><br>
+        <div class="section3">
+          <h2>阴府众神明</h2>
+          <img src="yimhu1.jpg" alt="yimhu1" class="section3" style="max-width: 100%;">
+      </div>
+      </div>
+  </div>
+  
+
+    <footer>
+        <p>Copyright &copy; 2023. All rights reserved.</p>
+        <p>The above is a work in progress.</p>
+    </footer>
+</body>
+</html>
