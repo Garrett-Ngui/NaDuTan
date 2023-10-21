@@ -150,6 +150,25 @@
             margin: 10px;
         }
 
+        /* Media query for mobile phones */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .timeline {
+                width: 100%;
+            }
+
+            .timeline .event {
+                margin: 0; /* Remove margin to stack horizontally */
+            }
+
+            .sections {
+                width: 100%;
+            }
+        }
+
         /* For Timeline*/
         .event {
             padding-left: 25px;
@@ -170,7 +189,7 @@
             font-family: 'Noto Sans TC';
             font-size: 100%;
             margin-left: 30px;
-            margin-right: 10px;
+            margin-right: 0px;
             text-align: justify;
         }
 
@@ -189,7 +208,7 @@
             height: 100%;
             background-color: #ffcf5a;
             position: absolute;
-            left: 3.9%; /* Position the line in the center of the dot */
+            left: 4%; /* Position the line in the center of the dot */
         }
 
        /* For Section 2 & 3*/
@@ -199,11 +218,17 @@
             flex-direction: column;
         }
 
-        .section2,
+        .section2 {
+            flex: 1;
+            background-color: none;
+            padding: 40px 0 10px 0;
+            box-sizing: border-box;
+        }
+
         .section3 {
             flex: 1;
             background-color: none;
-            padding: 20px;
+            padding: 10px 0 10px 0;
             box-sizing: border-box;
         }
 
@@ -245,27 +270,6 @@
             margin: 0;
             border-radius: 30px;
         }
-
-
-        /* Media query for mobile phones */
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-
-            .timeline {
-                width: 100%;
-            }
-
-            .timeline .event {
-                margin: 0; /* Remove margin to stack horizontally */
-            }
-
-            .sections {
-                width: 100%;
-            }
-        }
-
 
         /* Style the footer */
         footer {
