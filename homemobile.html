@@ -23,6 +23,8 @@
             -ms-overflow-style: none; /* For Internet Explorer and Edge */
         }
 
+
+
         /* Webkit (Chrome, Safari) scrollbar customization */
         body::-webkit-scrollbar {
             width: 6px;
@@ -57,6 +59,7 @@
             display: block;
             margin: 0 auto;
         }
+
 
         header h1 {
             font-size: 2em;
@@ -112,20 +115,6 @@
             font-size: 1.2em;
         }
 
-        /* Style the buttons */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #fbe19f;
-            color: black;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            font-family: "value-sans-regular", "Arial", "Helvetica", sans-serif;
-            font-weight: bold;
-        }
-
-
         /* Style the footer */
         footer {
             background-color: #333;
@@ -134,23 +123,53 @@
             padding: 10px 0;
             font-size: 70%;
         }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATZxOL5nIR16ct36T2qCnF_JwxMvlCuLs&callback=initMap" async defer></script>
-    <script>
-        // Initialize and create the map
-        function initMap() {
-            var companyLocation = { lat: 1.3672232255064187 ,lng: 103.92851438703903 };
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 16, // Adjust the zoom level
-                center: companyLocation
-            });
-            var marker = new google.maps.Marker({
-                position: companyLocation,
-                map: map,
-                title: '九条桥新芭拿督坛' // Replace with your company name
-            });
+
+        #map {
+            height: 300px;
+            width: 100%;
         }
-    </script>
+
+        /* New style for the section with split columns */
+        .split-section {
+            display: flex;
+            flex-direction: row;
+            background-color: #fff5d9;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .split-section .column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .split-section img {
+            max-width: 70%;
+            height: auto;
+            display:block;
+            margin: 0 auto;
+        }
+
+        .column h2 {
+            font-size: 180%;
+            text-align: center;
+            color: #655a3f;
+            padding-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 120%;
+            text-align: justify;
+            padding: 0 50px;
+        }
+
+        @media (max-width: 767px) {
+            .split-section {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -167,27 +186,27 @@
     <!-- Responsive image -->
     <img src="Background2.jpg" alt="Image Description">
 
-    <main class="bottom-sections">
-        <section class="bottom-section" id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our temple and our people.</p>
-            <a href="about.html" class="btn">Learn More</a>
-        </section>
-        <section class="bottom-section" id="services">
-            <h2>Our Services</h2>
-            <p>Explore the events and celebrations that we have during the year.</p>
-            <a href="services.html" class="btn">Explore Services</a>
-        </section>
-        <section class="bottom-section" id="contact">
-            <h2>Contact Us</h2>
-            <p>Contact us or leave us any questions that you have.</p>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </section>
-    </main>
+    <!-- Split section with two columns -->
+    <div class="split-section">
+        <div class="column">
+            <img src="charity.jpg" alt="charity">
+            <h2>感恩之心 慈善活动</h2>
+            <p>九条桥新芭拿督坛的理事和香客们每一年都会在农历新年前，腾出时间来做些慈善活动，帮助些有需要的国人。近年里，拿督坛拜访了同敬乐龄活动中心，分发红包于乐龄们拜个早年。在哪我们也准备了干粮和些日用品来分发给乐龄们，和他们享用了自助餐，愉快的享受了一下午的游戏与卡拉OK。</p>
+        </div>
+        <div class="column">
+            <img src="ganesha3.jpg" alt="ganesha3">
+            <h2>庆祝甘尼莎佛祖千秋</h2>
+            <p>本坛每一年都会庆祝印度神，甘尼莎佛祖的千秋日 。在千秋庆典当天，从早上十点到下午三点本壇邀请了印度法师为前来参拜的善男信女诵经祝寿祈福，保佑各位身体健康，好运连连，万事如意，事事顺心。印度师傅诵经后，善信们都能亲自把椰子扔向地面打碎开运，象征把一年的霉运消除，祈求甘尼莎佛祖为善信消灾解难。</p>
+        </div>
+        <div class="column">
+            <img src="changeclothes.jpg" alt="changeclothes">
+            <h2>新年神明新神袍</h2>
+            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自己和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿。如想为神明们喜敬神袍的话，快到本坛选择与登记。</p>
+        </div>
+    </div>
+
 
     <div id="map" style="height: 300px; width: 100%;"></div>
-
-
 
     <footer>
         <p>Copyright &copy; 2023. All rights reserved.</p>
