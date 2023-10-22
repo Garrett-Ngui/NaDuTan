@@ -23,8 +23,6 @@
             -ms-overflow-style: none; /* For Internet Explorer and Edge */
         }
 
-
-
         /* Webkit (Chrome, Safari) scrollbar customization */
         body::-webkit-scrollbar {
             width: 6px;
@@ -59,7 +57,6 @@
             display: block;
             margin: 0 auto;
         }
-
 
         header h1 {
             font-size: 2em;
@@ -129,7 +126,7 @@
             width: 100%;
         }
 
-        /* New style for the section with split columns */
+        /* section with split columns */
         .split-section {
             display: flex;
             flex-direction: row;
@@ -147,7 +144,7 @@
         .split-section img {
             max-width: 70%;
             height: auto;
-            display:block;
+            display: block;
             margin: 0 auto;
         }
 
@@ -167,6 +164,49 @@
         @media (max-width: 767px) {
             .split-section {
                 flex-direction: column;
+            }
+        }
+
+        /* 7th month section */
+        .photo-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* To remove gaps between images */
+        }
+
+        .photo {
+            flex: 0 0 calc(33.33% - 1px); /* Three images in a row with 10px gap between them */
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .photo img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .photo-description {
+            width: 100%; /* Take up full width to display below images */
+            text-align: center;
+            margin-top: 0px; /* Add space between images and text */
+            padding-left: 130px;
+            padding-right: 130px;
+        }
+        .photo-description h1 {
+            font-size: 300%;
+            color: #655a3f;
+        }
+
+        .photo-description p {
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+
+
+        @media (max-width: 767px) {
+            .photo {
+                flex: 0 0 100%; /* On mobile, display images in a single column */
             }
         }
     </style>
@@ -191,20 +231,35 @@
         <div class="column">
             <img src="charity.jpg" alt="charity">
             <h2>感恩之心 慈善活动</h2>
-            <p>九条桥新芭拿督坛的理事和香客们每一年都会在农历新年前，腾出时间来做些慈善活动，帮助些有需要的国人。近年里，拿督坛拜访了同敬乐龄活动中心，分发红包于乐龄们拜个早年。在哪我们也准备了干粮和些日用品来分发给乐龄们，和他们享用了自助餐，愉快的享受了一下午的游戏与卡拉OK。</p>
+            <p>九条桥新芭拿督坛的理事和香客们每一年都会在农历新年前，腾出时间来做些慈善活动，帮助些有需要的国人。近年里，拿督坛拜访了同敬乐龄活动中心，分发红包于乐龄们拜个早年。在哪我们也准备了干粮和些日用品来分发给乐龄们，和他们享用了自助餐，愉快的享受了一下午的游戏与卡拉OK.</p>
         </div>
         <div class="column">
             <img src="ganesha3.jpg" alt="ganesha3">
             <h2>庆祝甘尼莎佛祖千秋</h2>
-            <p>本坛每一年都会庆祝印度神，甘尼莎佛祖的千秋日 。在千秋庆典当天，从早上十点到下午三点本壇邀请了印度法师为前来参拜的善男信女诵经祝寿祈福，保佑各位身体健康，好运连连，万事如意，事事顺心。印度师傅诵经后，善信们都能亲自把椰子扔向地面打碎开运，象征把一年的霉运消除，祈求甘尼莎佛祖为善信消灾解难。</p>
+            <p>本坛每一年都会庆祝印度神，甘尼莎佛祖的千秋日。在千秋庆典当天，从早上十点到下午三点本壇邀请了印度法师为前来参拜的善男信女诵经祝寿祈福，保佑各位身体健康，好运连连，万事如意，事事顺心。印度师傅诵经后，善信们都能亲自把椰子扔向地面打碎开运，象征把一年的霉运消除，祈求甘尼莎佛祖为善信消灾解难.</p>
         </div>
         <div class="column">
             <img src="changeclothes.jpg" alt="changeclothes">
             <h2>新年神明新神袍</h2>
-            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自己和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿。如想为神明们喜敬神袍的话，快到本坛选择与登记。</p>
+            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自差和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿.如想为神明们喜敬神袍的话，快到本坛选择与登记.</p>
         </div>
     </div>
 
+    <div class="photo-section">
+        <div class="photo">
+            <img src="7month1.jpg" alt="Photo 1">
+        </div>
+        <div class="photo">
+            <img src="7month2.jpg" alt="Photo 2">
+        </div>
+        <div class="photo">
+            <img src="7month3.jpg" alt="Photo 3">
+        </div>
+        <div class="photo-description">
+            <h1>慶赞中元</h1>
+            <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元.本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利.本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加.</p>
+        </div>
+    </div>
 
     <div id="map" style="height: 300px; width: 100%;"></div>
 
@@ -212,5 +267,6 @@
         <p>Copyright &copy; 2023. All rights reserved.</p>
         <p>The above is a work in progress.</p>
     </footer>
+
 </body>
 </html>
