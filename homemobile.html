@@ -121,11 +121,6 @@
             font-size: 70%;
         }
 
-        #map {
-            height: 300px;
-            width: 100%;
-        }
-
         /* section with split columns */
         .split-section {
             display: flex;
@@ -133,7 +128,7 @@
             background-color: #fff5d9;
             padding: 20px;
             margin: 10px 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: none;
         }
 
         .split-section .column {
@@ -172,6 +167,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; /* To remove gaps between images */
+            background-color: #ffe6a6;
+            box-shadow: none;
         }
 
         .photo {
@@ -191,6 +188,7 @@
             margin-top: 0px; /* Add space between images and text */
             padding-left: 15%;
             padding-right: 15%;
+            padding-bottom: 10%;
         }
         .photo-description h1 {
             font-size: 200%;
@@ -209,7 +207,10 @@
                 flex: 0 0 100%; /* On mobile, display images in a single column */
             }
         }
+
+
     </style>
+
 </head>
 <body>
     <div class="header">
@@ -241,7 +242,7 @@
         <div class="column">
             <img src="changeclothes.jpg" alt="changeclothes">
             <h2>新年神明穿新神袍</h2>
-            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自差和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿.如想为神明们喜敬神袍的话，快到本坛选择与登记。</p>
+            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自差和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿。如想为神明们喜敬神袍的话，快到本坛选择与登记。</p>
         </div>
     </div>
 
@@ -257,16 +258,45 @@
         </div>
         <div class="photo-description">
             <h1>农历七月 慶赞中元</h1>
-            <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元.本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利.本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。</p>
+            <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元。本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利。本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
         </div>
     </div>
 
+    <!-- Add a placeholder for the map -->
     <div id="map" style="height: 300px; width: 100%;"></div>
 
     <footer>
         <p>Copyright &copy; 2023. All rights reserved.</p>
         <p>The above is a work in progress.</p>
     </footer>
+
+    <script>
+        function initMap() {
+            var location = { lat: 1.3672232255064187, lng: 103.92851438703903 }; // Replace with your desired coordinates.
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: location,
+                zoom: 15 // Adjust the zoom level as needed.
+            });
+
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Your Location' // Customize the marker title.
+            });
+        }
+
+        // Load the Google Maps JavaScript API with your API key
+        function loadGoogleMapsScript() {
+            var script = document.createElement('script');
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyATZxOL5nIR16ct36T2qCnF_JwxMvlCuLs&callback=initMap';
+            script.async = true;
+            script.defer = true;
+            document.body.appendChild(script);
+        }
+
+        // Call the function to load the map
+        loadGoogleMapsScript();
+    </script>
 
 </body>
 </html>
