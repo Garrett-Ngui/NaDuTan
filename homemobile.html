@@ -21,6 +21,7 @@
             scrollbar-width: thin; /* For Firefox */
             scrollbar-color: transparent transparent; /* For Firefox */
             -ms-overflow-style: none; /* For Internet Explorer and Edge */
+            overflow-x: hidden;
         }
 
         /* Webkit (Chrome, Safari) scrollbar customization */
@@ -48,6 +49,18 @@
             max-width: 100%; /* Ensures images don't exceed their container width */
             height: auto; /* Maintains the image's aspect ratio */
             margin-top: 20px;
+        }
+        
+        .background-image-container {
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .background-image-container img {
+            width: 100%;
+            height: auto;
         }
 
         /* Style the header (image portion) */
@@ -211,7 +224,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="Templelogoword.png" alt="Company Logo" style="max-width: 50%;">
+        <img src="Templelogoword.png" alt="Company Logo" style="max-width: 30%;">
     </div>
     
     <nav>
@@ -222,7 +235,9 @@
     </nav>
 
     <!-- Responsive image -->
-    <img src="Background2.jpg" alt="Image Description">
+    <div class="background-image-container">
+        <img src="Background2.jpg" alt="Background Image">
+    </div>
 
     <!-- Split section with two columns -->
     <div class="split-section">
