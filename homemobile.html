@@ -278,13 +278,13 @@
             margin-bottom: 20px;
         }
 
-        .inner-photo h1 {
+        .content-text h1 {
             margin-top: -20px;
             margin-bottom: 10px;
             color: #655a3f;
         }
 
-        .inner-photo p{
+        .content-text p{
             margin-right: 60px;
             text-align: justify;
         }
@@ -295,8 +295,132 @@
             }
         }
 
+    @media (max-width: 768px) {
+    /* Adjust the split-section layout to stack columns */
+    .split-section .column {
+        padding: 20px 0; /* Adjust padding to separate columns */
+        text-align: center; /* Center align content */
+    }
 
+    .split-section img {
+        max-width: 100%; /* Adjust image width to fit smaller screens */
+        margin-top: 20px;
+    }
 
+    /* Adjust inner-photo layout */
+    .inner-photo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inner-photo .photo img {
+        max-width: 90%; /* Adjust image width */
+        margin: 10px auto; /* Adjust image margins */
+    }
+
+    .inner-photo h1 {
+        margin-top: 10px; /* Adjust heading margin */
+        margin-bottom: 5px; /* Adjust heading margin */
+    }
+
+    .inner-photo p {
+        margin: 0 10px; /* Adjust text margins */
+        text-align: justify;
+    }
+
+    /* Ensure the second inner container text is displayed */
+    .content:nth-child(2) .inner-container {
+        display: block; /* Ensure the container is displayed */
+    }
+
+    .content:nth-child(2) .inner-container p {
+        text-align: justify;
+        margin: 10px; /* Add margin for text */
+    }
+
+    /* Ensure text inside the second inner container is visible */
+    .content:nth-child(2) .inner-container .content-text {
+        display: block; /* Ensure text is displayed */
+    }
+
+    /* Adjust the container layout */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        margin-bottom: 20px; /* Add some space between stacked elements */
+        text-align: center; /* Center align content */
+    }
+
+    /* Adjust the footer font size for better readability on mobile */
+    footer {
+        font-size: 80%;
+    }
+
+    /* Adjust inner container layout */
+    .inner-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inner-container img {
+        max-width: 90%; /* Adjust image width */
+        margin: 20px auto; /* Adjust image margins */
+    }
+
+    .content h1 {
+        margin-top: 20px; /* Adjust heading margin */
+        margin-bottom: 10px; /* Adjust heading margin */
+    }
+
+    .content p {
+        margin: 0 10px; /* Adjust text margins */
+        text-align: justify;
+    }
+
+            /* Adjust photo section layout */
+            .photo-section .photo {
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .photo-section .photo img {
+                max-width: 90%;
+                margin: 10px auto;
+            }
+
+            /* Adjust content-text margins */
+            .content-text {
+        display: block;
+        position: relative; /* Set positioning to relative */
+        z-index: 1; /* Set a higher z-index to bring it forward */
+        margin-top: -200px; /* Adjust margin-top as needed to move it upwards */
+        background-color: #ffe6a6;
+        padding: 20px; /* Add padding to the content for better spacing */
+    }
+
+    /* Ensure the map doesn't overlap with the content-text */
+    #map {
+        margin-top: 100px; /* Adjust this value to create space between map and content-text */
+        z-index: 0; /* Set a lower z-index for the map */
+    }
+
+            .content-text h1 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+
+            .content-text p {
+                margin: 10px;
+                text-align: justify;
+            }
+}
         
     </style>
 
@@ -371,7 +495,7 @@
             <div class="photo">
                 <img src="7month.png" alt="7month">
             </div>
-            <div>
+            <div class="content-text">
                 <h1>农历七月 慶赞中元</h1>
                 <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元。本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利。本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
             </div>
