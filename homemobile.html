@@ -45,7 +45,7 @@
         }
 
         /* Style for responsive images */
-        img {
+        .header img {
             max-width: 100%; /* Ensures images don't exceed their container width */
             height: auto; /* Maintains the image's aspect ratio */
             margin-top: 20px;
@@ -61,6 +61,7 @@
         .background-image-container img {
             width: 100%;
             height: auto;
+            margin-top: 20px;
         }
 
         /* Style the header (image portion) */
@@ -175,6 +176,74 @@
             }
         }
 
+       /* l5b2fri Basic styles for desktop */
+       .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #698b5b;
+        }
+
+        .inner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #698b5b;
+            margin-top: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 0 40px 0 20px;
+        }
+
+        .content .inner-container {
+            padding: 0px 0 10px 0;
+        }
+
+        .content img {
+            flex: 1;
+            padding: 0;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .content .inner-container img {
+            max-width: 80%;
+            max-height: auto;
+        }
+
+        .content h1 {
+            font-size: 250%;
+            color: #112c09;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .content p {
+          font-size: 100%;
+          text-align: justify;
+          padding-bottom: 0;
+        }
+
+        .content .inner-container p {
+            text-align: justify;
+        }
+
+        /* Media query for mobile phones */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            .content {
+                margin-bottom: 20px; /* Add some spacing between stacked elements */
+            }
+        }
+
+
+
         /* 7th month section */
         .photo-section {
             display: flex;
@@ -190,27 +259,33 @@
             margin-bottom: 0px;
         }
 
-        .photo img {
+        .inner-photo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .photo-section .photo img {
             max-width: 80%;
             height: auto;
+            margin-top: 60px;
         }
 
-        .photo-description {
-            width: 100%; /* Take up full width to display below images */
-            text-align: center;
-            margin-top: 0px; /* Add space between images and text */
-            padding-left: 15%;
-            padding-right: 15%;
-            padding-bottom: 10%;
+        .inner-photo .photo img {
+            max-width: 50%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-        .photo-description h1 {
-            font-size: 200%;
+
+        .inner-photo h1 {
+            margin-top: -20px;
+            margin-bottom: 10px;
             color: #655a3f;
-            padding-bottom: 2%;
         }
 
-        .photo-description p {
-            font-size: 100%;
+        .inner-photo p{
+            margin-right: 60px;
             text-align: justify;
         }
 
@@ -219,12 +294,16 @@
                 flex: 0 0 100%; /* On mobile, display images in a single column */
             }
         }
+
+
+
+        
     </style>
 
 </head>
 <body>
     <div class="header">
-        <img src="Templelogoword.png" alt="Company Logo" style="max-width: 40%;">
+        <img src="Templelogoword.png" alt="Company Logo" style="max-width: 45%;">
     </div>
     
     <nav>
@@ -254,9 +333,29 @@
         <div class="column">
             <img src="changeclothes.jpg" alt="changeclothes">
             <h2>新年神明穿新神袍</h2>
-            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自差和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿。如想为神明们喜敬神袍的话，快到本坛选择与登记。</p>
+            <p>每一年，香客们都争先恐后地想要为他们心目中的神明喜敬新一年的神袍。以答谢神明们一直以来的保护关爱，希望神明们在接下来会继续保佑和看着自差和家里的大大小小。本坛都会在每一年庆祝众神千秋庆典的最后一天，为众神更换神袍，年年都给神明们一件全新的神袍穿。如想为神明们喜敬神袍的话，快到本坛选择与登记。</p>
         </div>
     </div>
+
+    <div class="container">
+        <div class="content">
+            <img src="l5b2fri1.png" alt="l5b2fri">
+        </div>
+        <div class="content">
+            <h1>阴府五殿二爷伯救世</h1>
+            <p>每逢星期五晚上 8.45，为了帮助广大善信们消灾解难脱离困难，指点迷津，本壇阴府五殿二爺伯会降乩办公救世萬民。若想请教五殿二爺伯由他指点任何事务，本壇将在每周的星期三开放拿号码。善信们能亲自来到本坛或致电本坛办公室提前排队拿号码。</P>
+            <br>
+            <p>注意：请确保号码被叫时本身已在廟里。本壇保留权利跳过不在廟里的号主。</p>
+                <div class="inner-container">
+                    <p>经过本坛五殿二爺伯指示，将于每逢星期五晚上救世之时在庙里为众善信祭拜无主孤魂和无主孤儿，保佑各位合家平安，身体健康，平安顺利，财源滚滚，万事如意<br>
+                    <br>
+                    祭拜无主孤魂和无主孤儿供品为金纸及饭菜每份 $10，由本坛准备及提供。善信们可亲自前来或可由本坛理事替您祭拜。</p>
+                    <div class="photo">
+                        <img src="bozhu.png" alt="bozhu">
+                    </div>
+                </div>
+        </div>
+      </div>
 
     <div class="photo-section">
         <div class="photo">
@@ -268,9 +367,14 @@
         <div class="photo">
             <img src="7month3.jpg" alt="Photo 3">
         </div>
-        <div class="photo-description">
-            <h1>农历七月 慶赞中元</h1>
-            <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元。本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利。本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
+        <div class="inner-photo">
+            <div class="photo">
+                <img src="7month.png" alt="7month">
+            </div>
+            <div>
+                <h1>农历七月 慶赞中元</h1>
+                <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元。本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利。本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
+            </div>
         </div>
     </div>
 
