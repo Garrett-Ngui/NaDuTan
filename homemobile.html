@@ -249,7 +249,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; /* To remove gaps between images */
-            background-color: #ffe6a6;
+            background-color: #698b5b;
             box-shadow: none;
         }
 
@@ -281,13 +281,51 @@
         .content-text h1 {
             margin-top: -20px;
             margin-bottom: 10px;
-            color: #655a3f;
+            color: #112c09;
         }
 
         .content-text p{
+            font-size: 125%;
             margin-right: 60px;
             text-align: justify;
         }
+
+
+        /* Create a grid layout for the bottom sections */
+        .bottom-sections2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: none;
+            gap: 0;
+        }
+
+        /* Style individual bottom sections */
+        .bottom-section2 {
+            background-color: transparent;
+            color: #5a5344;
+            text-align: center;
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            margin-bottom: -65px;
+        }
+
+        .bottom-section2 h2 {
+            background-color: none;
+            color: #5a5344;
+            font-family: 'value-sans-regular', Arial, sans-serif;
+            font-size: 160%;
+        }
+
+        .bottom-section2 p {
+            background-color: none;
+            color: #5a5344;
+            font-family: Arial, sans-serif;
+            font-size: 85%;
+            margin: 0;
+            padding: 0;
+        }
+ 
 
         @media (max-width: 767px) {
             .photo {
@@ -306,6 +344,19 @@
         max-width: 70%; /* Adjust image width to fit smaller screens */
         margin-top: 20px;
     }
+
+        .column h2 {
+            font-size: 180%;
+            text-align: center;
+            color: #655a3f;
+            padding-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 120%;
+            text-align: justify;
+            padding: 0 20px;
+        }
 
     /* Adjust inner-photo layout */
     .inner-photo {
@@ -396,19 +447,40 @@
                 margin: 10px auto;
             }
 
+            .bottom-section2 {
+                margin-top: 120px;
+                margin-bottom: -190px;
+            }
+
             /* Adjust content-text margins */
             .content-text {
         display: block;
         position: relative; /* Set positioning to relative */
         z-index: 1; /* Set a higher z-index to bring it forward */
-        margin-top: -200px; /* Adjust margin-top as needed to move it upwards */
-        background-color: #ffe6a6;
+        margin-top: -300px; /* Adjust margin-top as needed to move it upwards */
+        background-color: #698b5b;
         padding: 20px; /* Add padding to the content for better spacing */
     }
 
+        .bottom-section2 h2 {
+            background-color: none;
+            color: #5a5344;
+            font-family: 'value-sans-regular', Arial, sans-serif;
+            font-size: 160%;
+        }
+
+        .bottom-section2 p {
+            background-color: none;
+            color: #5a5344;
+            font-family: Arial, sans-serif;
+            font-size: 75%;
+            margin: 0;
+            padding: 0;
+        }
+
     /* Ensure the map doesn't overlap with the content-text */
     #map {
-        margin-top: 100px; /* Adjust this value to create space between map and content-text */
+        margin-top: 120px; /* Adjust this value to create space between map and content-text */
         z-index: 0; /* Set a lower z-index for the map */
     }
 
@@ -503,6 +575,24 @@
             </div>
         </div>
     </div>
+
+    <main class="bottom-sections2">
+        <section class="bottom-section2" id="Location">
+            <h2 style="margin-bottom: 20px;">Location</h2>
+            <p>95 Tampines Link #01-01<br>Singapore 528745</p>
+        </section>
+
+        <section class="bottom-section2" id="Hours">
+            <h2 style="margin-bottom: 20px;">Hours</h2>
+            <p>Monday - Sunday<br>6am - 5:30pm</p>
+        </section>
+
+        <section class="bottom-section2" id="Contact">
+            <h2 style="margin-bottom: 20px;">Contact</h2>
+            <p>+65 6787 8887<br>+65 9007 4398</p>
+        </section>
+    </main>
+
 
     <!-- Add a placeholder for the map -->
     <div id="map" style="height: 300px; width: 100%;"></div>

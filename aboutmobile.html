@@ -110,16 +110,16 @@
         }
 
         .content h1 {
-            font-size: 400%;
+            font-size: 550%;
             font-family: "Ma Shan Zheng";
             color: #655a3f;
             font-weight: lighter;
             text-align: center;
-            margin: -30px 0 10px 0;
+            margin: 0 0 30px 0;
         }
 
         .content p {
-          font-size: 100%;
+          font-size: 120%;
           text-align: justify;
         }
 
@@ -151,6 +151,21 @@
 
         /* Media query for mobile phones */
         @media (max-width: 768px) {
+            .content h1 {
+            font-size: 450%;
+            font-family: "Ma Shan Zheng";
+            color: #655a3f;
+            font-weight: lighter;
+            text-align: center;
+            margin: -30px 0 20px 0;
+            }
+
+            .content p {
+            font-size: 110%;
+            text-align: justify;
+            }
+
+
             .container {
                 flex-direction: column;
             }
@@ -166,6 +181,39 @@
             .sections {
                 width: 100%;
             }
+
+            .sections .circular-image img {
+            width: 160px;
+            height: auto;
+            border-radius: 50%;
+            }
+
+            .sections .circular-image p {
+            color: #ffcf5a;
+            margin-top: 5px;
+            font-family: "Ma Shan Zheng";
+            font-size: 180%;
+            font-weight: lighter;
+            }
+
+            /* Add this CSS to style the dots and connecting line */
+            .dot {
+                width: 15px;
+                height: 15px;
+                background-color: #ffcf5a;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .timeline .event::before {
+                content: "";
+                width: 2px;
+                height: 100%;
+                background-color: #ffcf5a;
+                position: absolute;
+                left: 3.6%; /* Position the line in the center of the dot */
+            }
+
         }
 
         /* For Timeline*/
@@ -207,7 +255,7 @@
             height: 100%;
             background-color: #ffcf5a;
             position: absolute;
-            left: 4%; /* Position the line in the center of the dot */
+            left: 3.8%; /* Position the line in the center of the dot */
         }
 
        /* For Section 2 & 3*/
@@ -220,20 +268,20 @@
         .section2 {
             flex: 1;
             background-color: none;
-            padding: 40px 0 10px 0;
+            padding: 0 0 40px 0;
             box-sizing: border-box;
         }
 
         .section3 {
             flex: 1;
             background-color: none;
-            padding: 10px 0 10px 0;
+            padding: 15px 0 15px 0;
             box-sizing: border-box;
             text-align: center;
         }
 
         .sections h2 {
-            font-size: 400%;
+            font-size: 500%;
             font-family: "Ma Shan Zheng";
             color: #655a3f;
             text-align: center;
@@ -250,7 +298,7 @@
         }
 
         .circular-image img {
-            width: 300px;
+            width: 330px;
             height: auto;
             border-radius: 50%;
         }
@@ -260,7 +308,7 @@
             color: #ffcf5a;
             margin-top: 5px;
             font-family: "Ma Shan Zheng";
-            font-size: 150%;
+            font-size: 300%;
             font-weight: lighter;
         }
 
@@ -268,7 +316,7 @@
             width: 90%;
             height: auto;
             margin: 0;
-            border-radius: 30px;
+            border-radius: 50px;
         }
 
         /* Style the footer */
@@ -298,7 +346,7 @@
           <img src="Aboutus1.jpg" alt="Aboutus1">
       </div>
       <div class="content">
-          <h1>我们的故事</h1>
+          <h1>拿督坛的故事</h1>
           <p>拿督坛建于1927年。1920年几户人家从远方来开辟丛林，把这黑暗的丛林点燃第一盏灯，称此地为 “德义村” 也称 “九条桥”。“德义村” 也称 “九条桥” 是因为村里共有九条大大小小的桥共村民使用。而 “新芭” 是指现在的罗弄泉至宏茂桥一道的地段，“老芭” 是从宏茂桥一道至淡甲路的地段。拿督公庙就刚好座落在 “新芭” 现今宏茂桥一道油站对面。</p><br>
           <p>因为九条桥是多数人熟悉的地方，为了保留拿督公的历史，我们决定称拿督公庙为 ”九条桥新芭拿督坛“。</p><br>
           <P>由于旧庙的地方小，为了庆祝拿督公及众神千秋，理事会决定把庆典设在宏茂桥组屋大牌306楼下，那也是本坛第一次在组屋区庆祝千秋。直到1984年政府征用土地，发展为碧山公园，本坛也搬迁到宏茂桥大牌307的组屋，继续为各界善信提供救世服务直到普宫。</P>
@@ -361,6 +409,7 @@
             <p class="description">联合庙终于建竣。九条桥新芭拿督坛也于2004年10月11日（农历甲申年八月廿八日）举行新庙落成普宫升座大典仪式。</p>
         </div>
       </div>
+
       <div class="sections">
         <div class="section2">
             <h2>我们的主神</h2>
