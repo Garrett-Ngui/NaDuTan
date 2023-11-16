@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NaDuTan</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
+    </style>
+
     <style>
         /* Reset some default styles */
         body, h1, h2, p {
@@ -14,7 +19,7 @@
         /* Set a background color for the entire page */
         body {
             background-color: #fff5d9;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
@@ -214,17 +219,16 @@
         }
 
         .content h1 {
-            font-size: 350%;
-            font-family: KaiTi;
-            font-weight: bold;
+            font-size: 400%;
+            font-family: 'Ma Shan Zheng';
             color: #002b3e;
             text-align: center;
             padding-top: 10px;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
         }
 
         .content p {
-          font-size: 110%;
+          font-size: 115%;
           text-align: justify;
           padding-bottom: 0;
         }
@@ -253,7 +257,8 @@
         .title {
             font-size: 300%;
             padding-top: 40px;
-            font-family: KaiTi;
+            padding-bottom: 10px;
+            font-family: 'Ma Shan Zheng';
             font-weight: bold;
             color: #cd385e;
             text-align: center;
@@ -292,12 +297,22 @@
             height: auto;
             margin-top: 20px;
             margin-bottom: 20px;
+            margin-left: -20px;
+        }
+
+        .inner-photo .photo2 img {
+            max-width: 240%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: -240px;
         }
 
         .content-text p{
             color: #9dd359;
-            font-size: 125%;
-            margin-right: 60px;
+            font-size: 110%;
+            margin-right: 310px;
+            margin-left: -80px;
             text-align: justify;
         }
 
@@ -342,10 +357,10 @@
         }
 
         .title {
-            font-size: 160%;
-            font-family: "KaiTi", "PingFang SC";
-            font-weight: bold;
+            font-size: 150%;
+            font-family: 'Ma Shan Zheng';
             padding-top: 40px;
+            padding-bottom: 10px;
             color: #cd385e;
             text-align: center;
             background-color: #02022e;
@@ -357,11 +372,18 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 400px;
     }
 
     .inner-photo .photo img {
         max-width: 90%; /* Adjust image width */
         margin: 10px auto; /* Adjust image margins */
+    }
+
+    .inner-photo .photo2 img {
+        max-width: 90%; /* Adjust image width */
+        margin: 10px auto; /* Adjust image margins */
+        margin-top: -10px;
     }
 
     .inner-photo p {
@@ -451,7 +473,6 @@
 
     /* Ensure the map doesn't overlap with the content-text */
     #map {
-        margin-top: 145px; /* Adjust this value to create space between map and content-text */
         z-index: 0; /* Set a lower z-index for the map */
     }
 
@@ -463,6 +484,7 @@
 
             .content-text p {
                 margin: 10px;
+                margin-top: -150px;
                 text-align: justify;
             }
 }
@@ -527,7 +549,7 @@
       </div>
 
       <div class="title">
-        <h1>农历七月 慶赞中元</h1>
+        <h1>农历七月 庆赞中元</h1>
     </div>
 
     <div class="photo-section">
@@ -546,7 +568,10 @@
             </div>
             <div class="content-text">
                 <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元。本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利。<br> 
-                <br> 本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
+                <br> 本壇在每年的中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂和无主孤儿。如往年一样本壇也为善信们准备了普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
+            </div>
+            <div class="photo2">
+                <img src="pudubucket.png" alt="7month">
             </div>
         </div>
     </div>
