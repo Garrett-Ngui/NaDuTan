@@ -215,16 +215,20 @@
 
         .content h1 {
             font-size: 250%;
-            color: #112c09;
+            color: #002b3e;
             text-align: center;
             padding-top: 10px;
             padding-bottom: 10px;
         }
 
         .content p {
-          font-size: 100%;
+          font-size: 110%;
           text-align: justify;
           padding-bottom: 0;
+        }
+
+        .red-text {
+            color: maroon;
         }
 
         .content .inner-container p {
@@ -243,13 +247,21 @@
         }
 
 
-
         /* 7th month section */
+        .title {
+            font-size: 300%;
+            padding-top: 40px;
+            color: #112c09;
+            text-align: center;
+            background-color: #5e7b52;
+        }
+
+
         .photo-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; /* To remove gaps between images */
-            background-color: #698b5b;
+            background-color: #5e7b52;
             box-shadow: none;
         }
 
@@ -268,7 +280,7 @@
         .photo-section .photo img {
             max-width: 80%;
             height: auto;
-            margin-top: 60px;
+            margin-top: 20px;
         }
 
         .inner-photo .photo img {
@@ -276,12 +288,6 @@
             height: auto;
             margin-top: 20px;
             margin-bottom: 20px;
-        }
-
-        .content-text h1 {
-            margin-top: -20px;
-            margin-bottom: 10px;
-            color: #112c09;
         }
 
         .content-text p{
@@ -297,33 +303,6 @@
             grid-template-columns: repeat(3, 1fr);
             background-color: none;
             gap: 0;
-        }
-
-        /* Style individual bottom sections */
-        .bottom-section2 {
-            background-color: transparent;
-            color: #5a5344;
-            text-align: center;
-            box-shadow: none;
-            margin: 0;
-            padding: 0;
-            margin-bottom: -65px;
-        }
-
-        .bottom-section2 h2 {
-            background-color: none;
-            color: #5a5344;
-            font-family: 'value-sans-regular', Arial, sans-serif;
-            font-size: 160%;
-        }
-
-        .bottom-section2 p {
-            background-color: none;
-            color: #5a5344;
-            font-family: Arial, sans-serif;
-            font-size: 85%;
-            margin: 0;
-            padding: 0;
         }
  
 
@@ -358,6 +337,15 @@
             padding: 0 20px;
         }
 
+        .title {
+            font-size: 160%;
+            padding-top: 40px;
+            color: #112c09;
+            text-align: center;
+            background-color: #5e7b52;
+        }
+
+
     /* Adjust inner-photo layout */
     .inner-photo {
         flex-direction: column;
@@ -368,11 +356,6 @@
     .inner-photo .photo img {
         max-width: 90%; /* Adjust image width */
         margin: 10px auto; /* Adjust image margins */
-    }
-
-    .inner-photo h1 {
-        margin-top: 10px; /* Adjust heading margin */
-        margin-bottom: 5px; /* Adjust heading margin */
     }
 
     .inner-photo p {
@@ -452,15 +435,15 @@
         display: block;
         position: relative; /* Set positioning to relative */
         z-index: 1; /* Set a higher z-index to bring it forward */
-        margin-top: -325px; /* Adjust margin-top as needed to move it upwards */
-        background-color: #698b5b;
+        margin-top: -240px; /* Adjust margin-top as needed to move it upwards */
+        background-color: #5e7b52;
         padding: 20px; /* Add padding to the content for better spacing */
     }
 
 
     /* Ensure the map doesn't overlap with the content-text */
     #map {
-        margin-top: 120px; /* Adjust this value to create space between map and content-text */
+        margin-top: 150px; /* Adjust this value to create space between map and content-text */
         z-index: 0; /* Set a lower z-index for the map */
     }
 
@@ -523,17 +506,21 @@
             <h1>阴府五殿二爷伯救世</h1>
             <p>每逢星期五晚上 8.45，为了帮助广大善信们消灾解难脱离困难，指点迷津，本壇阴府五殿二爺伯会降乩办公救世萬民。若想请教五殿二爺伯由他指点任何事务，本壇将在每周的星期三开放拿号码。善信们能亲自来到本坛或致电本坛办公室提前排队拿号码。</P>
             <br>
-            <p>注意：请确保号码被叫时本身已在廟里。本壇保留权利跳过不在廟里的号主。</p>
+            <p><span class="red-text">注意：请确保号码被叫时本身已在廟里。本壇保留权利跳过不在廟里的号主。</span></p>
                 <div class="inner-container">
-                    <p>经过本坛五殿二爺伯指示，将于每逢星期五晚上救世之时在庙里为众善信祭拜无主孤魂和无主孤儿，保佑各位合家平安，身体健康，平安顺利，财源滚滚，万事如意<br>
+                    <p>经过本坛五殿二爺伯指示，将于每逢星期五晚上救世之时在庙里为众善信祭拜无主孤魂和无主孤儿，保佑各位合家平安，身体健康，平安顺利，财源滚滚，万事如意。<br>
                     <br>
-                    祭拜无主孤魂和无主孤儿供品为金纸及饭菜每份 $10，由本坛准备及提供。善信们可亲自前来或可由本坛理事替您祭拜。</p>
+                    祭拜无主孤魂和无主孤儿的每份供品为金银纸及饭菜<span class="red-text">每份 $10</span>，由本坛准备及提供。善信们可亲自前来或可由本坛理事替您祭拜。</p>
                     <div class="photo">
                         <img src="bozhu.png" alt="bozhu">
                     </div>
                 </div>
         </div>
       </div>
+
+      <div class="title">
+        <h1>农历七月 慶赞中元</h1>
+    </div>
 
     <div class="photo-section">
         <div class="photo">
@@ -550,7 +537,6 @@
                 <img src="7month.png" alt="7month">
             </div>
             <div class="content-text">
-                <h1>农历七月 慶赞中元</h1>
                 <p>每逢农历七月十三至十四，本壇都会举办普渡仪式以慶赞中元。本壇每年都会邀请资深道长前来举行普渡仪式，为众好兄弟，无主孤魂，无主孤儿供食祭祀，以保平安顺利。<br> 
                 <br> 本壇每年中元节都会准备总多祭品由善信们选择及供奉给好兄弟，无主孤魂及无主孤儿.如往年一样本壇会为善信们准备普渡福桶由善信们在中元普渡法会前报名参加。善信们能在农历七月十四日当天，亲自前来本坛参加我们的普渡仪式为众好兄弟，无主孤魂，无主孤儿供食祭祀，祈求身体健康，万事如意，生意兴隆，家和万事兴。</p>
             </div>
